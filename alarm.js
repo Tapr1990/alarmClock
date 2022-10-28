@@ -2,10 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const selecthour = document.getElementById("hour");
     const selectminute = document.getElementById("minute"); 
-   // const selectoptions = document.getElementById("option");
     const button = document.querySelector("button");
     const currentTime = document.querySelector("span");
     const content = document.getElementById("content");
+   
 
     let alarmTime;
     isAlarmSet = false;
@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
         i = i < 10 ? "0" + i : i;
     
-        //let option = ` <option value="${i}">${i}</option>`;
-         //selectMenu[0].firstElementChild.insertAdjacentHTML("afterend", option);
+  
     
         selecthour.appendChild(document.createElement("option"));
         selecthour.lastElementChild.textContent = i;
@@ -37,18 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         selectminute.lastElementChild.setAttribute("value", i);
     }
 
-    /*for(let i = 0; i < 2; i++) {
 
-        if(i == 0) {
-            i = "AM"
-        } else {
-            i = "PM"
-        }
-
-        selectoptions.appendChild(document.createElement("option"));
-        selectoptions.lastElementChild.textContent = i;
-        selectoptions.lastElementChild.setAttribute("value", i);
-    }*/
 
     setInterval( () => {
 
